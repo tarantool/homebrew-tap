@@ -64,7 +64,7 @@ jobs:
         run: |
           mkdir bottles
           cd bottles
-          brew test-bot --only-formulae
+          brew test-bot -v -d --tap --only-formulae
 
       - name: Output brew test-bot --only-formulae failures
         if: always()
