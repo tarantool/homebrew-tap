@@ -1,7 +1,7 @@
 Tarantool Homebrew Tap
 ======================
 
-This is [Homebrew](brew) tap or several versions of formulae for installing
+This is [Homebrew][brew] tap or several versions of formulae for installing
 [Tarantool][tnt] to different versions of Mac OSX systems.
 
 TL;DR
@@ -13,11 +13,11 @@ TL;DR
 Why there is yet another Homebrew formulae for Tarantool?
 ---------------------------------------------------------
 
-There is already Tarantool formulae in the central Homebrew-core
+There is already Tarantool formulae in the central [Homebrew-core][homebrew-core]
 repository, so why we may need this Tap?
 
-It's complicated. [Tarantool](tnt) supports [several versions of a product](releases)
-at the same time, of different stability levels, e.g. [LTS, stable, beta](releases),
+It's complicated. [Tarantool][tnt] supports [several versions of a product][releases]
+at the same time, of different stability levels, e.g. [LTS, stable, beta][releases],
 not saying there is actual development head. Unfortunately, you have to be very
 large product, installed millions of installations, to make possible to keep several
 versions of formulaes available in the Homebrew-core, e.g. at the momemnt of writing
