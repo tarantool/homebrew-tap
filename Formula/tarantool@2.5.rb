@@ -14,11 +14,11 @@ class TarantoolAT25 < Formula
   end
 
   depends_on "cmake" => :build
+  depends_on "curl-openssl"
   depends_on "icu4c"
+  depends_on "ncurses" if DevelopmentTools.clang_build_version >= 1000
   depends_on "openssl@1.1"
   depends_on "readline"
-  depends_on "curl-openssl"
-  depends_on "ncurses" if DevelopmentTools.clang_build_version >= 1000
 
   # uses_from_macos "curl"
   # uses_from_macos "ncurses"
@@ -49,7 +49,7 @@ class TarantoolAT25 < Formula
       -DCURSES_NCURSES_INCLUDE_PATH=#{Formula["ncurses"].opt_include}
       -DCURSES_NCURSES_LIBRARY=#{Formula["ncurses"].opt_lib}/libncurses.dylib
       -DICONV_INCLUDE_DIR=#{sdk}/usr/include
-    ] 
+    ]
     mkdir "build" do
       system "cmake", "..", *args
       system "make", "install"
