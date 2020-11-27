@@ -4,7 +4,7 @@ class Tntpython2 < Formula
   url "https://www.python.org/ftp/python/2.7.17/Python-2.7.17.tar.xz"
   sha256 "4d43f033cdbd0aa7b7023c81b0e986fd11e653b5248dac9144d508f11812ba41"
   revision 1
-  head "https://github.com/python/cpython.git", :branch => "2.7"
+  head "https://github.com/python/cpython.git", branch: "2.7"
 
   bottle do
     sha256 "accfaa922708f00afb69ab230199f96e6ecdddd248a1eca586ce1e5e5cfd732b" => :catalina
@@ -282,15 +282,16 @@ class Tntpython2 < Formula
     EOS
   end
 
-  def caveats; <<~EOS
-    Pip and setuptools have been installed. To update them
-      pip install --upgrade pip setuptools
-    You can install Python packages with
-      pip install <package>
-    They will install into the site-package directory
-      #{site_packages}
-    See: https://docs.brew.sh/Homebrew-and-Python
-  EOS
+  def caveats
+    <<~EOS
+      Pip and setuptools have been installed. To update them
+        pip install --upgrade pip setuptools
+      You can install Python packages with
+        pip install <package>
+      They will install into the site-package directory
+        #{site_packages}
+      See: https://docs.brew.sh/Homebrew-and-Python
+    EOS
   end
 
   test do
