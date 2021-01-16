@@ -1,4 +1,4 @@
-class Tarantool < Formula
+class TarantoolAT26 < Formula
   desc "In-memory database and Lua application server"
   homepage "https://tarantool.org/"
   url "https://download.tarantool.org/tarantool/2.6/src/tarantool-2.6.1.0.tar.gz"
