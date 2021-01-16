@@ -1,17 +1,10 @@
 class TarantoolAT25 < Formula
   desc "In-memory database and Lua application server"
   homepage "https://tarantool.org/"
-  url "https://download.tarantool.org/tarantool/2.5/src/tarantool-2.5.2.0.tar.gz"
-  sha256 "f64b8ef772d42017bd938770912b4a1727ce6302087efcd5c7faac9e425d9ac4"
+  url "https://download.tarantool.org/tarantool/2.5/src/tarantool-2.5.3.0.tar.gz"
+  sha256 "edcbec391c706f60e1fce3c37e1d9c335245c318e5eb2e94fa91cf712389ade7"
   license "BSD-2-Clause"
   head "https://github.com/tarantool/tarantool.git", branch: "2.5", shallow: false
-
-  bottle do
-    cellar :any
-    sha256 "10240e8f72bc8c9a2463e22fbc6ea4033b6b775b50419040f6f1491ae91ef0ff" => :catalina
-    sha256 "76d89fbaa6d7a4265051ee2acf5bea261b829041b312335047466f4a8c85723c" => :mojave
-    sha256 "35f468f277d8b6d4889199c05462d675bc37f09794ef11a8b657ab13db648c95" => :high_sierra
-  end
 
   depends_on "cmake" => :build
   depends_on "curl-openssl"
