@@ -20,7 +20,7 @@ It's complicated. [Tarantool][tnt] supports [several versions of a product][rele
 at the same time, of different stability levels, e.g. [LTS, stable, beta][releases],
 not saying there is actual development head. Unfortunately, you have to be very
 large product, installed millions of installations, to make possible to keep several
-versions of formulaes available in the Homebrew-core, e.g. at the momemnt of writing
+versions of formulaes available in the Homebrew-core, e.g. at the moment of writing
 Boost was available as 4 versions: `HEAD` (1.74), temporary alias 1.74, and older
 versions - 1.57 and 1.60.
 Moreover, Homebrew is not keeping all released versions, just only a fraction.
@@ -53,13 +53,14 @@ not the latest one.
 
 So for installing of versions below, you need to run commands:
 
-| Tarantool version | Command                                       |
-|-------------------|-----------------------------------------------|
-| 1.10              | `brew install tarantool@1.10`                 |
-| 2.5               | `brew install tarantool@2.5`                  |
-| 2.6               | `brew install tarantool@2.6`                  |
-| _latest release_  | `brew install tarantool/tap/tarantool`        |
-| _master_          | `brew install tarantool/tap/tarantool --HEAD` |
+| Tarantool version       | Command                                       |
+|-------------------------|-----------------------------------------------|
+| 1.10 (lts)              | `brew install tarantool@1.10`                 |
+| 2.5 (stable)            | `brew install tarantool@2.5`                  |
+| 2.6 (stable)            | `brew install tarantool@2.6`                  |
+| 2.7 (beta)              | `brew install tarantool@2.7`                  |
+| _latest stable release_ | `brew install tarantool/tap/tarantool`        |
+| _master_                | `brew install tarantool/tap/tarantool --HEAD` |
 
 
 References
