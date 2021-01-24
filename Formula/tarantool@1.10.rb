@@ -7,7 +7,7 @@ class TarantoolAT110 < Formula
   head "https://github.com/tarantool/tarantool.git", branch: "1.10", shallow: false
 
   depends_on "cmake" => :build
-  depends_on "curl-openssl"
+  depends_on "curl"
   depends_on "icu4c"
   depends_on "ncurses" if DevelopmentTools.clang_build_version >= 1000
   depends_on "openssl@1.1"
@@ -36,8 +36,8 @@ class TarantoolAT110 < Formula
       -DOPENSSL_ROOT_DIR=#{Formula["openssl@1.1"].opt_prefix}
       -DREADLINE_ROOT=#{Formula["readline"].opt_prefix}
       -DENABLE_BUNDLED_LIBCURL=OFF
-      -DCURL_INCLUDE_DIR=#{Formula["curl-openssl"].opt_include}
-      -DCURL_LIBRARY=#{Formula["curl-openssl"].opt_lib}/libcurl.dylib
+      -DCURL_INCLUDE_DIR=#{Formula["curl"].opt_include}
+      -DCURL_LIBRARY=#{Formula["curl"].opt_lib}/libcurl.dylib
       -DCURSES_NEED_NCURSES=TRUE
       -DCURSES_NCURSES_INCLUDE_PATH=#{Formula["ncurses"].opt_include}
       -DCURSES_NCURSES_LIBRARY=#{Formula["ncurses"].opt_lib}/libncurses.dylib
