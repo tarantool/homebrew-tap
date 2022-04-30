@@ -6,7 +6,7 @@ class TarantoolAT28 < Formula
   license "BSD-2-Clause"
 
   head do
-    url "https://github.com/tarantool/tarantool.git", shallow: false
+    url "https://github.com/tarantool/tarantool.git", branch: "master"
 
     depends_on "autoconf" => :build
     depends_on "automake" => :build
