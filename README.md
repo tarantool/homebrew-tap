@@ -66,9 +66,10 @@ So for installing of versions below, you need to run commands:
 Only these versions have been adapted to build binary bottles, all the rest
 will require full rebuild from sources:
 
-| Tarantool version  | Target                                        |
-|--------------------|-----------------------------------------------|
-| @2.8 (2.8.4)       | linux/x86_64, macos_bigsur/x86_64             |
+| Tarantool version          | Target                                        |
+|----------------------------|-----------------------------------------------|
+| `tarantool@2.8` (2.8.4)    | linux/x86_64, macos_bigsur/x86_64             |
+| `tarantool@1.10` (1.10.12) | linux/x86_64, macos_bigsur/x86_64             |
 
 References
 ----------
