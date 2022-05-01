@@ -5,6 +5,12 @@ class TarantoolAT28 < Formula
   sha256 "6fc0b70aedd00c2328aa49dbb0ae9320eabf7266927f5e0790ff1a2ca67aa988"
   license "BSD-2-Clause"
 
+  bottle do
+    root_url "https://github.com/tarantool/homebrew-tap/releases/download/tarantool@2.8-2.8.4.0"
+    sha256                               big_sur:      "f7cfc47063346b1c095518a27bc0f2f7f05bea0f6e10fffcd31d1409905fa27e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "946ea5c9729231a9afbd144f4a2317c3b27f71e53a511d4bc977889bf4ad9cdf"
+  end
+
   head do
     url "https://github.com/tarantool/tarantool.git", branch: "master"
 
