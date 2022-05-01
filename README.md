@@ -58,10 +58,17 @@ So for installing of versions below, you need to run commands:
 | 1.10 (lts)              | `brew install tarantool@1.10`                 |
 | 2.5 (stable)            | `brew install tarantool@2.5`                  |
 | 2.6 (stable)            | `brew install tarantool@2.6`                  |
-| 2.7 (beta)              | `brew install tarantool@2.7`                  |
+| 2.7 (stable)            | `brew install tarantool@2.7`                  |
+| 2.8 (stable)            | `brew install tarantool@2.8`                  |
 | _latest stable release_ | `brew install tarantool/tap/tarantool`        |
 | _master_                | `brew install tarantool/tap/tarantool --HEAD` |
 
+Only these versions have been adapted to build binary bottles, all the rest
+will require full rebuild from sources:
+
+| Tarantool version  | Target                                        |
+|--------------------|-----------------------------------------------|
+| @2.8 (2.8.4)       | linux/x86_64, macos_bigsur/x86_64             |
 
 References
 ----------
