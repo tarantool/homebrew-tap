@@ -1,23 +1,30 @@
 class TarantoolAT110 < Formula
   desc "In-memory database and Lua application server"
   homepage "https://tarantool.org/"
-  url "https://download.tarantool.org/tarantool/1.10/src/tarantool-1.10.9.0.tar.gz"
-  sha256 "d636d65b14653e34b344b46d1c444a7adcb2962d3f33a1e31c39df6582cbdfad"
+  url "https://download.tarantool.org/tarantool/1.10/src/tarantool-1.10.12.88.tar.gz"
+  sha256 "ac225ed31c797e0588137c6e4e22b9769860d05daa87e30891aad37927302b66"
   license "BSD-2-Clause"
-  head "https://github.com/tarantool/tarantool.git", branch: "1.10", shallow: false
+
+  head do
+    url "https://github.com/tarantool/tarantool.git", branch: "master"
+
+    depends_on "autoconf" => :build
+    depends_on "automake" => :build
+    depends_on "libtool" => :build
+  end
 
   depends_on "cmake" => :build
-  depends_on "curl"
   depends_on "icu4c"
-  depends_on "ncurses" if DevelopmentTools.clang_build_version >= 1000
   depends_on "openssl@1.1"
   depends_on "readline"
 
-  # uses_from_macos "curl"
-  # uses_from_macos "ncurses"
+  uses_from_macos "curl"
+  uses_from_macos "ncurses"
 
   def install
-    sdk = MacOS::CLT.installed? ? "" : MacOS.sdk_path
+    later_than_bigsur = MacOS.version >= :big_sur
+    sdk = later_than_bigsur ? MacOS.sdk_path_if_needed : ""
+    lib_suffix = later_than_bigsur ? "tbd" : "dylib"
 
     # Necessary for luajit to build on macOS Mojave (see luajit formula)
     ENV["MACOSX_DEPLOYMENT_TARGET"] = MacOS.version
@@ -36,13 +43,22 @@ class TarantoolAT110 < Formula
       -DOPENSSL_ROOT_DIR=#{Formula["openssl@1.1"].opt_prefix}
       -DREADLINE_ROOT=#{Formula["readline"].opt_prefix}
       -DENABLE_BUNDLED_LIBCURL=OFF
-      -DCURL_INCLUDE_DIR=#{Formula["curl"].opt_include}
-      -DCURL_LIBRARY=#{Formula["curl"].opt_lib}/libcurl.dylib
-      -DCURSES_NEED_NCURSES=TRUE
-      -DCURSES_NCURSES_INCLUDE_PATH=#{Formula["ncurses"].opt_include}
-      -DCURSES_NCURSES_LIBRARY=#{Formula["ncurses"].opt_lib}/libncurses.dylib
       -DICONV_INCLUDE_DIR=#{sdk}/usr/include
     ]
+    args += if OS.mac?
+      %W[
+        -DCURL_INCLUDE_DIR={sdk}/usr/include
+        -DCURL_LIBRARY=#{sdk}/usr/lib/libcurl.#{lib_suffix}
+        -DCURSES_NEED_NCURSES=TRUE
+        -DCURSES_NCURSES_INCLUDE_PATH=#{sdk}/usr/include
+        -DCURSES_NCURSES_LIBRARY=#{sdk}/usr/lib/libncurses.#{lib_suffix}
+      ]
+    else
+      %W[
+        -DCURL_ROOT=#{Formula["curl"].opt_prefix}
+      ]
+    end
+
     mkdir "build" do
       system "cmake", "..", *args
       system "make", "install"
