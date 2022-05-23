@@ -1,8 +1,8 @@
 class TarantoolAT210 < Formula
   desc "In-memory database and Lua application server"
   homepage "https://tarantool.org/"
-  url "https://download.tarantool.org/tarantool/src/tarantool-2.10.0-rc1.tar.gz"
-  sha256 "6540d0a7f5605bfb663dd34ddd38c832f6b6c8ffc7ff853cceadb28452fe7589"
+  url "https://download.tarantool.org/tarantool/src/tarantool-2.10.0.tar.gz"
+  sha256 "42bb5a714ddf788a89ba4b2062582aee16a2bc7b68c7c3b8c03d7a30be878e2b"
   license "BSD-2-Clause"
 
   bottle do
