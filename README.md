@@ -60,7 +60,7 @@ So for installing of versions below, you need to run commands:
 | 2.6 (stable)            | `brew install tarantool@2.6`                  |
 | 2.7 (stable)            | `brew install tarantool@2.7`                  |
 | 2.8 (stable)            | `brew install tarantool@2.8`                  |
-| 2.10 (prerelease)       | `brew install tarantool@2.10`                 |
+| 2.10 (release)          | `brew install tarantool@2.10`                 |
 | _latest stable release_ | `brew install tarantool/tap/tarantool`        |
 | _master_                | `brew install tarantool/tap/tarantool --HEAD` |
 
@@ -71,7 +71,7 @@ will require full rebuild from sources:
 |----------------------------|-----------------------------------------------|
 | `tarantool@1.10` (1.10.12) | linux/x86_64, macos_bigsur/x86_64             |
 | `tarantool@2.8` (2.8.4)    | linux/x86_64, macos_bigsur/x86_64             |
-| `tarantool@2.10` (2.10.0-rc1)| linux/x86_64, macos_bigsur/x86_64           |
+| `tarantool@2.10` (2.10.0). | linux/x86_64, macos_bigsur/x86_64           |
 
 References
 ----------
