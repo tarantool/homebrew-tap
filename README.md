@@ -71,7 +71,7 @@ will require full rebuild from sources:
 |----------------------------|-----------------------------------------------|
 | `tarantool@1.10` (1.10.12) | linux/x86_64, macos_bigsur/x86_64             |
 | `tarantool@2.8` (2.8.4)    | linux/x86_64, macos_bigsur/x86_64             |
-| `tarantool@2.10` (2.10.0). | linux/x86_64, macos_bigsur/x86_64           |
+| `tarantool@2.10` (2.10.1). | linux/x86_64, macos_bigsur/x86_64           |
 
 References
 ----------
