@@ -68,7 +68,7 @@ class TarantoolAT210 < Formula
     # `#include <version>` from inside of Mac OS SDK headers
     # attempts to include "src/lib/small/VERSION" as a
     # header file that leads to a syntax error.
-    File.delete("src/lib/small/VERSION") if File.exist?("src/lib/small/VERSION")
+    rm_f "src/lib/small/VERSION"
 
     mkdir "build" do
       system "cmake", "..", *args
