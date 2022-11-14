@@ -6,9 +6,9 @@ class TarantoolAT210 < Formula
   license "BSD-2-Clause"
 
   bottle do
-    root_url "https://github.com/tarantool/homebrew-tap/releases/download/tarantool@2.10-2.10.3"
-    sha256                               big_sur:      "5f55b7086a426dbb68c15d4384fd6f9b3db63c0597211ed592a5a8295f7a4229"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "401116357976d020207d80ca46916b43c1ee22efae76814c60fb1c235a6bc0b1"
+    root_url "https://github.com/tarantool/homebrew-tap/releases/download/tarantool@2.10-2.10.4"
+    sha256                               big_sur:      "60f548506000506bb34b580029c33d6deba3b625a221a5ec056be3fbb83db1f9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "3e64625d2b56b5efd9d7392c2ad0343396a75ee4dcc22bea263622838edd6353"
   end
 
   head do
