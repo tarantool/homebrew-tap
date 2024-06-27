@@ -1,3 +1,11 @@
+Status
+======
+
+This repository is NOT supported by Tarantool Team.
+
+However, if you're interested in this project, we're happy to accept a
+contribution via a pull request.
+
 Tarantool Homebrew Tap
 ======================
 
